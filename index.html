@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function addfunc(){
+            var tr = document.createElement("tr");
+
+            var text1 = document.getElementById("addname");
+            var name = text1.value;
+            var td = document.createElement("td");
+            td.innerHTML = name;
+            tr.appendChild(td);
+
+            var text2 = document.getElementById("addname");
+            var home = text2.value;
+            var td = document.createElement("td");
+            td.innerHTML = home;
+            tr.appendChild(td);
+
+            var text3 = document.getElementById("addname");
+            var tel = text3.value;
+            var td = document.createElement("td");
+            td.innerHTML = tel;
+            tr.appendChild(td);
+
+            var table = document.getElementById("list");
+            table.appendChild(tr);
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <label >ชื่อลูกค้า: </label>
+        <input type="text" id="addname"></div><br>
+        <label >ที่อยู่: </label>
+        <input type="text" id="addhome"></div><br>
+        <label >โทรศัพท์: </label>
+        <input type="text" id="addtel"></div><br>
+        <input type="button" id="addbutton" value="เพิ่ม" onclick="addfunc()">
+    </form>
+    <br>
+    <br>
+    
+    <table id="list">
+        <tr>
+            <th>ชื่อลูกค้า</th>
+            <th>ที่อยู่ </th>
+            <th>โทรศัพท์</th>
+        </tr>
+    </table>
+
+</body>
+</html>
